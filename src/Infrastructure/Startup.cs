@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using FSH.WebApi.Application.Catalog.Fiches;
 using FSH.WebApi.Infrastructure.Auth;
 using FSH.WebApi.Infrastructure.BackgroundJobs;
 using FSH.WebApi.Infrastructure.Caching;
@@ -23,6 +24,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using FSH.WebApi.Application.Catalog.Fiches;
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
@@ -53,7 +55,8 @@ public static class Startup
             .AddRequestLogging(config)
             .AddRouting(options => options.LowercaseUrls = true)
             .AddServices();
-    }
+     }
+
 
     private static IServiceCollection AddApiVersioning(this IServiceCollection services) =>
         services.AddApiVersioning(config =>

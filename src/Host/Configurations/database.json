@@ -1,6 +1,6 @@
 {
   "DatabaseSettings": {
-    "DBProvider": "postgresql",
-    "ConnectionString": "Host=localhost;Port=5432;Database=fshDb;Username=postgres;Password=admin;Include Error Detail=true"
+    "ConnectionString": "Data Source=CMehrez\\SQL2014;User ID=sa;Password=ideal2s;Initial Catalog=API7;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True",
+    "DBProvider": "mssql"
   }
 }

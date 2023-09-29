@@ -1,9 +1,12 @@
 ﻿using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
+using DocumentFormat.OpenXml.InkML;
 using FSH.WebApi.Application.Common.Persistence;
 using FSH.WebApi.Domain.Common.Contracts;
 using FSH.WebApi.Infrastructure.Persistence.Context;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
+using System.Threading;
 
 namespace FSH.WebApi.Infrastructure.Persistence.Repository;
 
@@ -14,6 +17,12 @@ public class ApplicationDbRepository<T> : RepositoryBase<T>, IReadRepository<T>,
     public ApplicationDbRepository(ApplicationDbContext dbContext)
         : base(dbContext)
     {
+    }
+
+  
+    public Task<IEnumerable<object>> GetBySpecAsync()
+    {
+        throw new NotImplementedException();
     }
 
     // We override the default behavior when mapping to a dto.

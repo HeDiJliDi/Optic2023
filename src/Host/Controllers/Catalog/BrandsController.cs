@@ -1,9 +1,14 @@
-﻿using FSH.WebApi.Application.Catalog.Brands;
+﻿
+using FSH.WebApi.Application.Catalog.Brands;
+using FSH.WebApi.Domain.Catalog;
+
+
 
 namespace FSH.WebApi.Host.Controllers.Catalog;
 
 public class BrandsController : VersionedApiController
 {
+
     [HttpPost("search")]
     [MustHavePermission(FSHAction.Search, FSHResource.Brands)]
     [OpenApiOperation("Search brands using available filters.", "")]
@@ -20,7 +25,16 @@ public class BrandsController : VersionedApiController
         return Mediator.Send(new GetBrandRequest(id));
     }
 
+    [HttpPost("/pagination")]
+    [MustHavePermission(FSHAction.View, FSHResource.Brands)]
+    [OpenApiOperation("Get a list of all brands.", "")]
+    public Task<List<BrandDto>> GetListAsync( int pageNumber, int pageSize)
+    {
+        return Mediator.Send(new GetAllBrandsRequest(pageNumber, pageSize));
+    }
+
     [HttpPost]
+    [AllowAnonymous]
     [OpenApiOperation("Create a new brand.", "")]
     public Task<Guid> CreateAsync(CreateBrandRequest request)
     {
