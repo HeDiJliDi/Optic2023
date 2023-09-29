@@ -58,5 +58,8 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
     </ItemGroup>
+<<<<<<< HEAD
     <ProjectExtensions><VisualStudio><UserProperties configurations_4database_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 </Project>

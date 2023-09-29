@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 ﻿
 using FSH.WebApi.Application.Catalog.Brands;
 using FSH.WebApi.Domain.Catalog;
 
 
+=======
+﻿using FSH.WebApi.Application.Catalog.Brands;
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 
 namespace FSH.WebApi.Host.Controllers.Catalog;
 
 public class BrandsController : VersionedApiController
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
     [HttpPost("search")]
     [MustHavePermission(FSHAction.Search, FSHResource.Brands)]
     [OpenApiOperation("Search brands using available filters.", "")]
@@ -25,6 +32,7 @@ public class BrandsController : VersionedApiController
         return Mediator.Send(new GetBrandRequest(id));
     }
 
+<<<<<<< HEAD
     [HttpPost("/pagination")]
     [MustHavePermission(FSHAction.View, FSHResource.Brands)]
     [OpenApiOperation("Get a list of all brands.", "")]
@@ -35,6 +43,10 @@ public class BrandsController : VersionedApiController
 
     [HttpPost]
     [AllowAnonymous]
+=======
+    [HttpPost]
+    [MustHavePermission(FSHAction.Create, FSHResource.Brands)]
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
     [OpenApiOperation("Create a new brand.", "")]
     public Task<Guid> CreateAsync(CreateBrandRequest request)
     {

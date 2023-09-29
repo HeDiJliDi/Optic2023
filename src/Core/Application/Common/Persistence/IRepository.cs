@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿
 namespace FSH.WebApi.Application.Common.Persistence;
+=======
+﻿namespace FSH.WebApi.Application.Common.Persistence;
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 
 // The Repository for the Application Db
 // I(Read)RepositoryBase<T> is from Ardalis.Specification
@@ -10,8 +14,11 @@ namespace FSH.WebApi.Application.Common.Persistence;
 public interface IRepository<T> : IRepositoryBase<T>
     where T : class, IAggregateRoot
 {
+<<<<<<< HEAD
     
     Task<IEnumerable<object>> GetBySpecAsync();
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 }
 
 /// <summary>

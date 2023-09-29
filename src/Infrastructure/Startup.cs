@@ -1,6 +1,9 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
+<<<<<<< HEAD
 using FSH.WebApi.Application.Catalog.Fiches;
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 using FSH.WebApi.Infrastructure.Auth;
 using FSH.WebApi.Infrastructure.BackgroundJobs;
 using FSH.WebApi.Infrastructure.Caching;
@@ -24,7 +27,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+<<<<<<< HEAD
 using FSH.WebApi.Application.Catalog.Fiches;
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
@@ -55,8 +61,12 @@ public static class Startup
             .AddRequestLogging(config)
             .AddRouting(options => options.LowercaseUrls = true)
             .AddServices();
+<<<<<<< HEAD
      }
 
+=======
+    }
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 
     private static IServiceCollection AddApiVersioning(this IServiceCollection services) =>
         services.AddApiVersioning(config =>

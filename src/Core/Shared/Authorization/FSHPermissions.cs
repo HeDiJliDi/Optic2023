@@ -26,7 +26,10 @@ public static class FSHResource
     public const string RoleClaims = nameof(RoleClaims);
     public const string Products = nameof(Products);
     public const string Brands = nameof(Brands);
+<<<<<<< HEAD
     public const string Fiches = nameof(Fiches);
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 }
 
 public static class FSHPermissions
@@ -60,6 +63,7 @@ public static class FSHPermissions
         new("Create Brands", FSHAction.Create, FSHResource.Brands),
         new("Update Brands", FSHAction.Update, FSHResource.Brands),
         new("Delete Brands", FSHAction.Delete, FSHResource.Brands),
+<<<<<<< HEAD
 
 
         new("View Fiches", FSHAction.View, FSHResource.Fiches, IsBasic: true),
@@ -70,6 +74,8 @@ public static class FSHPermissions
         new("Generate Fiches", FSHAction.Generate, FSHResource.Fiches),
         new("Clean Fiches", FSHAction.Clean, FSHResource.Fiches),
 
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
         new("Generate Brands", FSHAction.Generate, FSHResource.Brands),
         new("Clean Brands", FSHAction.Clean, FSHResource.Brands),
         new("View Tenants", FSHAction.View, FSHResource.Tenants, IsRoot: true),

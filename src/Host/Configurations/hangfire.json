@@ -20,8 +20,13 @@
       "WorkerCount": 5
     },
     "Storage": {
+<<<<<<< HEAD
       "StorageProvider": "mssql",
       "ConnectionString": "Data Source=CMehrez\\SQL2014;User ID=sa;Password=ideal2s;Initial Catalog=API7;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True",
+=======
+      "StorageProvider": "postgresql",
+      "ConnectionString": "Host=localhost;Port=5432;Database=fshDb;Username=postgres;Password=admin;Include Error Detail=true",
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
       "Options": {
         "CommandBatchMaxTimeout": "00:05:00",
         "QueuePollInterval": "00:00:01",

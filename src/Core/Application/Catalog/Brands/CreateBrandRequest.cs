@@ -12,6 +12,10 @@ public class CreateBrandRequestValidator : CustomValidator<CreateBrandRequest>
         RuleFor(p => p.Name)
             .NotEmpty()
             .MaximumLength(75)
+<<<<<<< HEAD
+=======
+            .MustAsync(async (name, ct) => await repository.FirstOrDefaultAsync(new BrandByNameSpec(name), ct) is null)
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
                 .WithMessage((_, name) => T["Brand {0} already Exists.", name]);
 }
 

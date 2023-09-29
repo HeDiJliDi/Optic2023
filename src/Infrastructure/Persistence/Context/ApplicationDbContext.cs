@@ -17,9 +17,12 @@ public class ApplicationDbContext : BaseDbContext
 
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Brand> Brands => Set<Brand>();
+<<<<<<< HEAD
     public DbSet<Fiche> Fiches => Set<Fiche>();
 
  
+=======
+>>>>>>> c92002da726e2279104296f5a25f1c50df0df2f3
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
